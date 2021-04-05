@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{698DC6AF-834E-4DDA-8C78-7EC6E0662E62}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>InmobiliariasHomeCo</RootNamespace>
+    <AssemblyName>OKYSoft.Business.InmobiliariasHomeCo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OKYSoft.Net">
+      <HintPath>..\References\OKYSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\Catalogs\IDataAccessEstate.cs" />
+    <Compile Include="Abstract\DataSheet\IDataAccessDataSheet.cs" />
+    <Compile Include="Abstract\Grid\IDataAccessGrid.cs" />
+    <Compile Include="Abstract\Modules\IDataAccessModules.cs" />
+    <Compile Include="Abstract\Roles\IDataAccessRole.cs" />
+    <Compile Include="Abstract\Searchs\IDataAccessColonies.cs" />
+    <Compile Include="Abstract\Searchs\IDataAccessMunicipality.cs" />
+    <Compile Include="Abstract\Searchs\IDataAccessPropertyType.cs" />
+    <Compile Include="Abstract\Searchs\IDataAccessState.cs" />
+    <Compile Include="Abstract\Searchs\IDataAccessTypeOfOperation.cs" />
+    <Compile Include="Abstract\Searchs\IDataAccessZone.cs" />
+    <Compile Include="Abstract\Searchs\IPropertiesSearch.cs" />
+    <Compile Include="Abstract\Security\IDataAccessSecurity.cs" />
+    <Compile Include="Abstract\Users\IDataAccessUsers.cs" />
+    <Compile Include="Abstract\Utilities\IDataAccessCity.cs" />
+    <Compile Include="Abstract\Utilities\IDataAccessColony.cs" />
+    <Compile Include="Abstract\Utilities\IDataAccessOwner.cs" />
+    <Compile Include="Concret\Mock\Client\DataAccessClientMock.cs" />
+    <Compile Include="Concret\Mock\DataSheet\DataAccessDataSheetMock.cs" />
+    <Compile Include="Concret\Mock\Estate\DataAccessEstateMock.cs" />
+    <Compile Include="Concret\Mock\Grid\Consultas\DataAccessGridConsultasMock.cs" />
+    <Compile Include="Concret\Mock\Search\DataAccessColoniesMock.cs" />
+    <Compile Include="Concret\Mock\Search\DataAccessMunicipalityMock.cs" />
+    <Compile Include="Concret\Mock\Search\DataAccessPropertiesSearchMock.cs" />
+    <Compile Include="Concret\Mock\Search\DataAccessPropertyTypeMock.cs" />
+    <Compile Include="Concret\Mock\Search\DataAccessStateMock.cs" />
+    <Compile Include="Concret\Mock\Search\DataAccessTypeOfOperationMock.cs" />
+    <Compile Include="Concret\Mock\Search\DataAccessZoneMock.cs" />
+    <Compile Include="Concret\SQL\City\DataAccessCitySQL.cs" />
+    <Compile Include="Concret\SQL\Colony\DataAccessColonySQL.cs" />
+    <Compile Include="Concret\SQL\Estate\DataAccessEstateSQL.cs" />
+    <Compile Include="Concret\SQL\Modules\DataAccessModulesSQL.cs" />
+    <Compile Include="Concret\SQL\Owner\DataAccessOwnerSQL.cs" />
+    <Compile Include="Concret\SQL\Role\DataAccessRoleSQL.cs" />
+    <Compile Include="Concret\SQL\Search\DataAccessPropertyTypeSQL.cs" />
+    <Compile Include="Concret\SQL\Security\DataAccessSecuritySQL.cs" />
+    <Compile Include="Concret\SQL\Users\DataAccessUsers .cs" />
+    <Compile Include="Entities\Currencies\Currency.cs" />
+    <Compile Include="Entities\DataSheet\DataSheet.cs" />
+    <Compile Include="Entities\Grid\Consultas\GridConsultas.cs" />
+    <Compile Include="Entities\Modules\Module.cs" />
+    <Compile Include="Entities\Persons\Gender.cs" />
+    <Compile Include="Entities\Persons\Owners\Owner.cs" />
+    <Compile Include="Entities\Persons\Users\User.cs" />
+    <Compile Include="Entities\Pojos\City\CityMessage.cs" />
+    <Compile Include="Entities\Pojos\Colony\ColonyMessage.cs" />
+    <Compile Include="Entities\Pojos\DataSheet\DataSheetMessage.cs" />
+    <Compile Include="Entities\Pojos\Estate\EstateMessage.cs" />
+    <Compile Include="Entities\Pojos\Gid\GridMessage.cs" />
+    <Compile Include="Entities\Pojos\Owner\OwnerMessage.cs" />
+    <Compile Include="Entities\Pojos\Properties\PropertyAddress.cs" />
+    <Compile Include="Entities\Pojos\Properties\PropertyDescription.cs" />
+    <Compile Include="Entities\Pojos\Properties\PropertyImg.cs" />
+    <Compile Include="Entities\Pojos\PropertyTestMessage.cs" />
+    <Compile Include="Entities\Pojos\Search\ColoniesMessage.cs" />
+    <Compile Include="Entities\Pojos\Search\MunicipalityMessage.cs" />
+    <Compile Include="Entities\Pojos\Search\PropertyTypeMessage.cs" />
+    <Compile Include="Entities\Pojos\Search\StateMessage.cs" />
+    <Compile Include="Entities\Pojos\Search\TypeOfOperationMessage.cs" />
+    <Compile Include="Entities\Pojos\Search\ZoneMessage.cs" />
+    <Compile Include="Entities\Properties\GroundType.cs" />
+    <Compile Include="Entities\Properties\PropertyImage.cs" />
+    <Compile Include="Entities\PropertyTest.cs" />
+    <Compile Include="Entities\Roles\Role.cs" />
+    <Compile Include="Entities\Searchs\Colonies.cs" />
+    <Compile Include="Entities\Searchs\Municipality.cs" />
+    <Compile Include="Entities\Searchs\PropertiesSearch.cs" />
+    <Compile Include="Entities\Searchs\PropertyType.cs" />
+    <Compile Include="Entities\Searchs\State.cs" />
+    <Compile Include="Entities\Searchs\TypeOfOperation.cs" />
+    <Compile Include="Entities\Searchs\Zone.cs" />
+    <Compile Include="Entities\Security\DatesSecurity.cs" />
+    <Compile Include="Entities\Security\Module.cs" />
+    <Compile Include="Entities\Security\Permits.cs" />
+    <Compile Include="Entities\Security\SecurityMessage.cs" />
+    <Compile Include="Entities\Users\User.cs" />
+    <Compile Include="Entities\Validations\City1.cs" />
+    <Compile Include="Entities\Validations\Colony1.cs" />
+    <Compile Include="Entities\Validations\Country1.cs" />
+    <Compile Include="Entities\Validations\CustomerInterests.cs" />
+    <Compile Include="Entities\Validations\Estate1.cs" />
+    <Compile Include="Entities\Validations\Foreign1.cs" />
+    <Compile Include="Entities\Validations\Interiors1.cs" />
+    <Compile Include="Entities\Validations\Locality1.cs" />
+    <Compile Include="Entities\Validations\Municipality1.cs" />
+    <Compile Include="Entities\Validations\EstateMeasures1.cs" />
+    <Compile Include="Entities\Validations\Sector1.cs" />
+    <Compile Include="Entities\Validations\Services1.cs" />
+    <Compile Include="Entities\Validations\State1.cs" />
+    <Compile Include="Entities\Validations\Street.cs" />
+    <Compile Include="Entities\Validations\TypeOfProperty.cs" />
+    <Compile Include="Entities\Validations\TypeOfTerrain.cs" />
+    <Compile Include="Entities\Validations\Zone.cs" />
+    <Compile Include="Entities\Validations\Zone1.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\Validations\Client.cs" />
+    <Compile Include="Entities\Validations\ClientInterests.cs" />
+    <Compile Include="Entities\Validations\Colony.cs" />
+    <Compile Include="Entities\Validations\Estate.cs" />
+    <Compile Include="Entities\Validations\Municipality.cs" />
+    <Compile Include="Entities\Validations\Owner.cs" />
+    <Compile Include="Entities\Validations\Partner.cs" />
+    <Compile Include="Entities\Validations\Provenance.cs" />
+    <Compile Include="Entities\Validations\Rol.cs" />
+    <Compile Include="Entities\Validations\Sector.cs" />
+    <Compile Include="Entities\Validations\State.cs" />
+    <Compile Include="Entities\Validations\SubtypeOfProperty.cs" />
+    <Compile Include="Protocols\ADDESTATE.cs" />
+    <Compile Include="Protocols\ADDPERSON.cs" />
+    <Compile Include="Protocols\ADDPROPERTY.cs" />
+    <Compile Include="Protocols\Advanced Search\ASCITY.cs" />
+    <Compile Include="Protocols\Advanced Search\ASPROPERTYSUBTYPE.cs" />
+    <Compile Include="Protocols\Advanced Search\ASPROPERTYTYPE.cs" />
+    <Compile Include="Protocols\Advanced Search\ASSTATE.cs" />
+    <Compile Include="Protocols\Advanced Search\ASTYPEOPERATION.cs" />
+    <Compile Include="Protocols\Advanced Search\GETASADVANCEDSEARCHPROPERTYFORRENT.cs" />
+    <Compile Include="Protocols\Advanced Search\GETASADVANCEDSEARCHPROPERTYFORRENTSALE.cs" />
+    <Compile Include="Protocols\Advanced Search\GETASADVANCEDSEARCHPROPERTYFORSALE.cs" />
+    <Compile Include="Protocols\Advanced Search\GETASCOLONY.cs" />
+    <Compile Include="Protocols\Advanced Search\GETASSEARCHPROPERTYFORRENT.cs" />
+    <Compile Include="Protocols\Advanced Search\GETASSEARCHPROPERTYFORRENTSALE.cs" />
+    <Compile Include="Protocols\Advanced Search\GETASSEARCHPROPERTYFORSALE.cs" />
+    <Compile Include="Protocols\Advanced Search\GETASZONE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\DELETEBASECATALOGSGROUNDTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\DELETEBASECATALOGSPROPERTSUBYTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\DELETEBASECATALOGSPROPERTYTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\DELETEBASECATALOGSSECTOR.cs" />
+    <Compile Include="Protocols\BaseCatalogs\DELETEBASECATALOGSSOURCE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\DELETEBASECATALOGSTYPEOPERATION.cs" />
+    <Compile Include="Protocols\BaseCatalogs\DELETEBASECATALOGSZONE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\GETBASECATALOGSGROUNDTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\GETBASECATALOGSPROPERTYSUBTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\GETBASECATALOGSPROPERTYTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\GETBASECATALOGSSECTOR.cs" />
+    <Compile Include="Protocols\BaseCatalogs\GETBASECATALOGSSOURCE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\GETBASECATALOGSTYPEOPERATION.cs" />
+    <Compile Include="Protocols\BaseCatalogs\GETBASECATALOGSZONE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\SETBASECATALOGSGROUNDTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\SETBASECATALOGSPROPERTSUBYTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\SETBASECATALOGSPROPERTYTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\SETBASECATALOGSSECTOR.cs" />
+    <Compile Include="Protocols\BaseCatalogs\SETBASECATALOGSSOURCE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\SETBASECATALOGSTYPEOPERATION.cs" />
+    <Compile Include="Protocols\BaseCatalogs\SETBASECATALOGSZONE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\UPDATEBASECATALOGSGROUNDTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\UPDATEBASECATALOGSPROPERTSUBYTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\UPDATEBASECATALOGSPROPERTYTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\UPDATEBASECATALOGSSECTOR.cs" />
+    <Compile Include="Protocols\BaseCatalogs\UPDATEBASECATALOGSSOURCE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\UPDATEBASECATALOGSTYPEOPERATION.cs" />
+    <Compile Include="Protocols\BaseCatalogs\UPDATEBASECATALOGSZONE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\Validate\VALIDATEPROPERTYSUBTYPE.cs" />
+    <Compile Include="Protocols\BaseCatalogs\Validate\VALIDATEPROPERTY.cs" />
+    <Compile Include="Protocols\Configuration\DELETECONFIGURATIONCITY.cs" />
+    <Compile Include="Protocols\Configuration\DELETECONFIGURATIONCOLONY.cs" />
+    <Compile Include="Protocols\Configuration\DELETECONFIGURATIONSTATE.cs" />
+    <Compile Include="Protocols\Configuration\GETCONFIGURATIONCITY.cs" />
+    <Compile Include="Protocols\Configuration\GETCONFIGURATIONCOLONY.cs" />
+    <Compile Include="Protocols\Configuration\GETCONFIGURATIONCOUNTRY.cs" />
+    <Compile Include="Protocols\Configuration\GETCONFIGURATIONPOSTCODE.cs" />
+    <Compile Include="Protocols\Configuration\GETCONFIGURATIONSTATE.cs" />
+    <Compile Include="Protocols\Configuration\GETCONFIGURATIONSTATES.cs" />
+    <Compile Include="Protocols\Configuration\SETCONFIGURATIONCITY.cs" />
+    <Compile Include="Protocols\Configuration\SETCONFIGURATIONCOLONY.cs" />
+    <Compile Include="Protocols\Configuration\SETCONFIGURATIONSTATE.cs" />
+    <Compile Include="Protocols\Configuration\UPDATECONFIGURATIONCITY.cs" />
+    <Compile Include="Protocols\Configuration\UPDATECONFIGURATIONCOLONY.cs" />
+    <Compile Include="Protocols\Configuration\UPDATECONFIGURATIONSTATE.cs" />
+    <Compile Include="Protocols\Contact\SETCONTACT.cs" />
+    <Compile Include="Protocols\GETCITIES.cs" />
+    <Compile Include="Protocols\GETCOLONIES.cs" />
+    <Compile Include="Protocols\GETCOLONIES1.cs" />
+    <Compile Include="Protocols\GETDATASHEET.cs" />
+    <Compile Include="Protocols\GETGRIDCONSULTAS.cs" />
+    <Compile Include="Protocols\GETMUNICIPALITY.cs" />
+    <Compile Include="Protocols\GETOWNERS.cs" />
+    <Compile Include="Protocols\GETPERSONS.cs" />
+    <Compile Include="Protocols\GETPROPERTIESSEARCH.cs" />
+    <Compile Include="Protocols\GETPROPERTIESTEST.cs" />
+    <Compile Include="Protocols\GETPROPERTYTYPE.cs" />
+    <Compile Include="Protocols\GETSTATE.cs" />
+    <Compile Include="Protocols\GETTYPEOFOPERATION.cs" />
+    <Compile Include="Protocols\GETZONE.cs" />
+    <Compile Include="Protocols\GETPROPERTIESTECHNICALSHEET.cs" />
+    <Compile Include="Protocols\HCOwner\DELETEOWNER.cs" />
+    <Compile Include="Protocols\HCOwner\GETUPDATEOWNER.cs" />
+    <Compile Include="Protocols\HCOwner\HCGETOWNER.cs" />
+    <Compile Include="Protocols\HCOwner\HCGETOWNERSALESREP.cs" />
+    <Compile Include="Protocols\HCOwner\SETOWNER.cs" />
+    <Compile Include="Protocols\HCOwner\UPDATEOWNER.cs" />
+    <Compile Include="Protocols\HCProperty\Class1.cs" />
+    <Compile Include="Protocols\HCProperty\Class2.cs" />
+    <Compile Include="Protocols\HCProperty\DELETEPROPERTY.cs" />
+    <Compile Include="Protocols\HCProperty\GETPROPERTYCURRENCY.cs" />
+    <Compile Include="Protocols\HCProperty\GETPROPERTYGROUNDTYPE.cs" />
+    <Compile Include="Protocols\HCProperty\GETPROPERTYIMAGES.cs" />
+    <Compile Include="Protocols\HCProperty\GETPROPERTYKEY.cs" />
+    <Compile Include="Protocols\HCProperty\GETPROPERTYSUBTYPEE.cs" />
+    <Compile Include="Protocols\HCProperty\GETPROPERTYZONE.cs" />
+    <Compile Include="Protocols\HCProperty\GETUPDATEPROPERTYFORRENT.cs" />
+    <Compile Include="Protocols\HCProperty\GETUPDATEPROPERTYFORRENTSALE.cs" />
+    <Compile Include="Protocols\HCProperty\GETUPDATEPROPERTYFORSALE.cs" />
+    <Compile Include="Protocols\HCProperty\HCGETPROPERTY.cs" />
+    <Compile Include="Protocols\HCProperty\SETPROPERTYFORRENT.cs" />
+    <Compile Include="Protocols\HCProperty\SETPROPERTYFORRENTSALE.cs" />
+    <Compile Include="Protocols\HCProperty\SETPROPERTYFORSALE.cs" />
+    <Compile Include="Protocols\HCProperty\UPDATEPROPERTYFORRENT.cs" />
+    <Compile Include="Protocols\HCProperty\UPDATEPROPERTYFORRENTSALE.cs" />
+    <Compile Include="Protocols\HCProperty\UPDATEPROPERTYFORSALE.cs" />
+    <Compile Include="Protocols\HCProperty\UPDATEPROPERTYIMAGES.cs" />
+    <Compile Include="Protocols\Modules\ASSIGNMENTOFMODULESBYROLE.cs" />
+    <Compile Include="Protocols\Modules\GETALLMODULES.cs" />
+    <Compile Include="Protocols\Modules\GETPERMISSIONSMODULE .cs" />
+    <Compile Include="Protocols\Protocols_GetDataSheet\GETDATASHEETADREES.cs" />
+    <Compile Include="Protocols\Protocols_GetDataSheet\GETDATASHEETIMAGES.cs" />
+    <Compile Include="Protocols\Protocols_GetDataSheet\GETDATASHEETSPACE.cs" />
+    <Compile Include="Protocols\Protocols_ShowProperty\GETSHOWPROPERTY.cs" />
+    <Compile Include="Protocols\Roless\DELETEROLE.cs" />
+    <Compile Include="Protocols\Roless\GETROLESFORUSER.cs" />
+    <Compile Include="Protocols\Roless\GETUPDATEROL.cs" />
+    <Compile Include="Protocols\Roless\SETROL.cs" />
+    <Compile Include="Protocols\Roless\UPDATEROL.cs" />
+    <Compile Include="Protocols\Roles\GETALLROLES.cs" />
+    <Compile Include="Protocols\SalesRep\Class1.cs" />
+    <Compile Include="Protocols\SalesRep\DELETESALESREP.cs" />
+    <Compile Include="Protocols\SalesRep\GETSALESREP.cs" />
+    <Compile Include="Protocols\SalesRep\GETSALESREPBANK.cs" />
+    <Compile Include="Protocols\SalesRep\GETUPDATESALESREP.cs" />
+    <Compile Include="Protocols\SalesRep\SETSALESREP.cs" />
+    <Compile Include="Protocols\SalesRep\UPDATESALESREP.cs" />
+    <Compile Include="Protocols\Security\GETPERMITS.cs" />
+    <Compile Include="Protocols\Security\STATUSSECURITYSTRING.cs" />
+    <Compile Include="Protocols\Userss\DELETEUSER.cs" />
+    <Compile Include="Protocols\Userss\GETUPDATEUSER.cs" />
+    <Compile Include="Protocols\Userss\SETROLUSER.cs" />
+    <Compile Include="Protocols\Userss\SETUSER.cs" />
+    <Compile Include="Protocols\Userss\UPDATEUSER.cs" />
+    <Compile Include="Protocols\Users\ASSIGNMENTOFROLESBYUSER.cs" />
+    <Compile Include="Protocols\Users\EDITASSIGNMENTOFROLESBYUSER.cs" />
+    <Compile Include="Protocols\Users\GETUSER.cs" />
+    <Compile Include="Protocols\Users\GETUSERS.cs" />
+    <Compile Include="Protocols\Users\GETUSERSROL.cs" />
+    <Compile Include="Protocols\Users\REGISTERUSER.cs" />
+    <Compile Include="Protocols\Users\SAVEASSIGNMENTOFROLESBYUSER.cs" />
+    <Compile Include="Protocols\Users\SETUSERS.cs" />
+    <Compile Include="Protocols\Security\VALIDATION.cs" />
+    <Compile Include="Protocols\Users\GETALLUSERS.cs" />
+    <Compile Include="Protocols\WebSocketServerTest.cs" />
+    <Compile Include="Entities\Pojos\Person\PersonMessage.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Abstract\IDataAccess.cs" />
+    <Compile Include="Abstract\Catalogs\IDataAccessPerson.cs" />
+    <Compile Include="Concret\SQL\DataBaseSQL.cs" />
+    <Compile Include="Concret\SQL\Client\DataAccessClientSQL.cs" />
+    <Compile Include="Entities\Persons\Person.cs" />
+    <Compile Include="Entities\Persons\Customers\Customer.cs" />
+    <Compile Include="Entities\Persons\Clients\Client.cs" />
+    <Compile Include="Entities\Persons\MaritalStatus.cs" />
+    <Compile Include="Entities\Persons\BankData.cs" />
+    <Compile Include="Entities\Persons\BankData\BankTypes.cs" />
+    <Compile Include="Entities\Persons\SalesReps\SalesRep.cs" />
+    <Compile Include="Entities\Persons\SalesReps\EducationLevel.cs" />
+    <Compile Include="Entities\Properties\Property.cs" />
+    <Compile Include="Entities\Locations\Address.cs" />
+    <Compile Include="Entities\Locations\Colony.cs" />
+    <Compile Include="Entities\Locations\State.cs" />
+    <Compile Include="Entities\Locations\City.cs" />
+    <Compile Include="Entities\Locations\Zone.cs" />
+    <Compile Include="Entities\Properties\OperationType.cs" />
+    <Compile Include="Entities\Properties\Area.cs" />
+    <Compile Include="Entities\Properties\Service.cs" />
+    <Compile Include="Entities\Properties\PropertyCharacteristics.cs" />
+    <Compile Include="Entities\Properties\Inside.cs" />
+    <Compile Include="Entities\Properties\Outside.cs" />
+    <Compile Include="Entities\Properties\Legal.cs" />
+    <Compile Include="Abstract\Properties\IDataAccessProperty.cs" />
+    <Compile Include="Concret\Mock\Property\DataAccessPropertyMock.cs" />
+    <Compile Include="Concret\Mock\DataAccessMock.cs" />
+    <Compile Include="Concret\SQL\Properties\DataAccessPropertySQL.cs" />
+    <Compile Include="Protocols\GETPROPERTIES.cs" />
+    <Compile Include="Entities\Pojos\Properties\PropertyMessage.cs" />
+    <Compile Include="Entities\Locations\Country.cs" />
+    <Compile Include="Service1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiceWebSocket.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web\clientList.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Protocols\Val\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

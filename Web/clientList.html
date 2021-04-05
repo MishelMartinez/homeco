@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+            var ws;
+            window.onload = function()
+            {
+                var support = "MozWebSocket" in window ? 'MozWebSocket' : ("WebSocket" in window ? 'WebSocket' : null);
+
+                if (support == null) {
+                    return;
+                }
+
+                ws = new window[support]('ws://127.0.0.1:9099/');
+
+                ws.onopen = function () {
+                    ws.send("GETPERSONS ");
+                };
+                ws.onclose = function(){
+                    alert('close');
+                };
+
+                ws.onmessage = function (evt) {
+                    var statusDb = evt.data;
+                    if (statusDb.startsWith("420")) {
+                        var body = document.getElementsByTagName("body")[0];
+                        var tabla = document.createElement("table");
+                        var tblBody = document.createElement("tbody");
+                        var thead = document.createElement("thead");
+                        var cabeceras = document.createElement("tr");
+
+                        //
+                        var cabecera = document.createElement("th");
+                        var texto = document.createTextNode("Nombre");
+
+                        cabecera.appendChild(texto);
+                        cabeceras.appendChild(cabecera);
+                        //
+                        cabecera = document.createElement("th");
+                        texto = document.createTextNode("Numero de Telefono");
+
+                        cabecera.appendChild(texto);
+                        cabeceras.appendChild(cabecera);
+                        //
+                        cabecera = document.createElement("th");
+                        texto = document.createTextNode("Numero de Movil");
+
+                        cabecera.appendChild(texto);
+                        cabeceras.appendChild(cabecera);
+                        //
+                         cabecera = document.createElement("th");
+                         texto = document.createTextNode("Email");
+
+                        cabecera.appendChild(texto);
+                        cabeceras.appendChild(cabecera);
+                        //
+                        cabecera = document.createElement("th");
+                        texto = document.createTextNode("Fecha de Registro");
+
+                        cabecera.appendChild(texto);
+                        cabeceras.appendChild(cabecera);
+                        //
+                        cabecera = document.createElement("th");
+                        texto = document.createTextNode("Fecha de Nacimiento");
+
+                        cabecera.appendChild(texto);
+                        cabeceras.appendChild(cabecera);
+                        //
+                        cabecera = document.createElement("th");
+                        texto = document.createTextNode("Estado Civil");
+
+                        cabecera.appendChild(texto);
+                        cabeceras.appendChild(cabecera);
+                        //
+                        cabecera = document.createElement("th");
+                        texto = document.createTextNode("Genero");
+
+                        cabecera.appendChild(texto);
+                        cabeceras.appendChild(cabecera);
+                        //
+                        cabecera = document.createElement("th");
+                        texto = document.createTextNode("Numero de Hijos");
+
+                        cabecera.appendChild(texto);
+                        cabeceras.appendChild(cabecera);
+
+                        thead.appendChild(cabeceras);
+                        
+                        var persons = JSON.parse(statusDb.substring(statusDb.indexOf(" "), statusDb.length));
+                        
+                        for (var i = 0; i < persons.length; i++){
+                            var hilera = document.createElement("tr");
+
+                            var celda = document.createElement("td");
+                            var textoCelda = document.createTextNode(persons[i].Name);
+                            
+                            celda.appendChild(textoCelda);
+                            hilera.appendChild(celda);
+                            
+                            celda = document.createElement("td");
+                            textoCelda = document.createTextNode(persons[i].PhoneNumber);
+                            celda.appendChild(textoCelda);
+                            hilera.appendChild(celda);
+                            
+                            celda = document.createElement("td");
+                            textoCelda = document.createTextNode(persons[i].MovilNumber);
+                            celda.appendChild(textoCelda);
+                            hilera.appendChild(celda);
+                            
+                            celda = document.createElement("td");
+                            textoCelda = document.createTextNode(persons[i].Email);
+                            celda.appendChild(textoCelda);
+                            hilera.appendChild(celda);                                
+                            
+                            celda = document.createElement("td");
+                            textoCelda = document.createTextNode(persons[i].RegDate);
+                            celda.appendChild(textoCelda);
+                            hilera.appendChild(celda);
+                            
+                            celda = document.createElement("td");
+                            textoCelda = document.createTextNode(persons[i].BirthDate);
+                            celda.appendChild(textoCelda);
+                            hilera.appendChild(celda);
+                            
+                            celda = document.createElement("td");
+                            textoCelda = document.createTextNode(persons[i].MaritalStatus);
+                            celda.appendChild(textoCelda);
+                            hilera.appendChild(celda);
+                            
+                            celda = document.createElement("td");
+                            textoCelda = document.createTextNode(persons[i].Gender);
+                            celda.appendChild(textoCelda);
+                            hilera.appendChild(celda);
+                            
+                            celda = document.createElement("td");
+                            textoCelda = document.createTextNode(persons[i].NumChildren);
+                            celda.appendChild(textoCelda);
+                            hilera.appendChild(celda);
+                            
+                            tblBody.appendChild(hilera);
+                        }
+                        tabla.appendChild(thead);
+                        tabla.appendChild(tblBody);
+                        body.appendChild(tabla);
+                        tabla.setAttribute("border","2");
+                    }
+                    else {
+                        alert("ERROR " + statusDb.split(" ")[0]);
+                    }
+                };
+            };
+    </script>
+</body>
+</html>

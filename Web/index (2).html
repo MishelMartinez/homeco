@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Prueba...</title>
+    </head>
+    <body>
+
+        <h3>Nombre</h3>
+        <input type="text" id="textNombre" />
+
+        <h3>Numero Telefono</h3>
+        <input type="text" id="textNumTelefono">
+
+        <h3>Numero Movil</h3>
+        <input type="text" id="textNumMovil">
+
+        <h3>Email</h3>
+        <input type="text" id="textEmail">
+
+        <h3>Fecha de Nacimiento</h3>
+        <input type="text" id="textDia">
+        <input type="text" id="textMes">
+        <input type="text" id="textAnio">
+
+        <h3>Estado Civil</h3>
+        <select id="selectEdoCivil" required>
+            <option itemid="">Seleccionar...</option>
+            <option itemid="1">Single</option>
+            <option itemid="2">Married</option>
+            <option itemid="3">Divorced</option>
+        </select>
+
+        <h3>Genero</h3>
+        <select id="selectGenero" required>
+            <option itemid="">Seleccionar...</option>
+            <option itemid="1">Femenino</option>
+            <option itemid="2">Masculino</option>
+            <option itemid="3">Otro</option>
+        </select>
+
+        <h3>Numero de Hijos</h3>
+        <input type="text" id="textNumHijos">
+
+        <input type="button" id="buttonSend" value="Send">
+
+        <script>
+
+            var ws;
+            window.onload = function()
+            {
+                var support = "MozWebSocket" in window ? 'MozWebSocket' : ("WebSocket" in window ? 'WebSocket' : null);
+
+
+                if (support == null) {
+                    return;
+                }
+
+                ws = new window[support]('ws://127.0.0.1:9099/');
+
+                ws.onopen = function(){
+                    alert('open');
+
+
+                    ws.send("GETPROPERTY ");
+                };
+
+
+                ws.onmessage = function (evt) {
+                    var statusProperty = evt.data;
+                    console.log(statusProperty);
+
+
+                };
+                ws.onclose = function(){
+                    alert('close');
+                };
+
+                var buttonSend = document.getElementById('buttonSend');
+
+                buttonSend.onclick = function()
+                {
+                    var date = new Date(document.getElementById('textAnio').value,document.getElementById('textMes').value,document.getElementById('textDia').value);
+
+                    var fechaHoy = new Date();
+
+                    var client  =
+                    {
+                        Name            : document.getElementById('textNombre').value,
+                        PhoneNumber     : document.getElementById('textNumTelefono').value,
+                        MovilNumber     : document.getElementById('textNumMovil').value,
+                        Email           : document.getElementById('textEmail').value,
+                        RegDate         : fechaHoy.getFullYear() + "-" + (fechaHoy.getMonth() + 1) + "-" + fechaHoy.getDate(),
+                        BirthDate       : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
+                        MaritalStatus   : document.getElementById('selectEdoCivil').options[document.getElementById('selectEdoCivil').selectedIndex].text,
+                        Gender          : document.getElementById('selectGenero').options[document.getElementById('selectGenero').selectedIndex].text,
+                        NumChildren     : document.getElementById('textNumHijos').value,
+                    };
+            console.log(client);
+
+                    ws.send("ADDPERSON " + JSON.stringify(client));
+                };
+
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+C:/BMS/HomeCoService/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe.config
+C:/BMS/HomeCoService/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe
+C:/BMS/HomeCoService/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.pdb
+C:/BMS/HomeCoService/InmobiliariasHomeCo/bin/Debug/OKYSoft.Net.dll
+C:/BMS/HomeCoService/InmobiliariasHomeCo/obj/x86/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe
+C:/BMS/HomeCoService/InmobiliariasHomeCo/obj/x86/Debug/OKYSoft.Business.InmobiliariasHomeCo.pdb
+C:/BMS/HomeCoService/InmobiliariasHomeCo/obj/x86/Debug/InmobiliariasHomeCo.csprojResolveAssemblyReference.cache
+C:/Users/OKYSoft Developer/Documents/run/InmobiliariasHomeCo/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe.config
+C:/Users/OKYSoft Developer/Documents/run/InmobiliariasHomeCo/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe
+C:/Users/OKYSoft Developer/Documents/run/InmobiliariasHomeCo/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.pdb
+C:/Users/OKYSoft Developer/Documents/run/InmobiliariasHomeCo/InmobiliariasHomeCo/obj/x86/Debug/InmobiliariasHomeCo.csprojResolveAssemblyReference.cache
+C:/Users/OKYSoft Developer/Documents/run/InmobiliariasHomeCo/InmobiliariasHomeCo/obj/x86/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe
+C:/Users/OKYSoft Developer/Documents/run/InmobiliariasHomeCo/InmobiliariasHomeCo/obj/x86/Debug/OKYSoft.Business.InmobiliariasHomeCo.pdb
+C:/Users/OKYSoft Developer/Pictures/InmobiliariasHomeCo/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe.config
+C:/Users/OKYSoft Developer/Pictures/InmobiliariasHomeCo/InmobiliariasHomeCo/obj/x86/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe
+C:/Users/OKYSoft Developer/Pictures/InmobiliariasHomeCo/InmobiliariasHomeCo/obj/x86/Debug/OKYSoft.Business.InmobiliariasHomeCo.pdb
+C:/Users/OKYSoft Developer/Pictures/InmobiliariasHomeCo/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe
+C:/Users/OKYSoft Developer/Pictures/InmobiliariasHomeCo/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.pdb
+C:/Users/OKYSoft Developer/Pictures/InmobiliariasHomeCo/InmobiliariasHomeCo/obj/x86/Debug/InmobiliariasHomeCo.csprojResolveAssemblyReference.cache
+/Users/developer/Desktop/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe.config
+/Users/developer/Desktop/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe
+/Users/developer/Desktop/InmobiliariasHomeCo/bin/Debug/OKYSoft.Business.InmobiliariasHomeCo.pdb
+/Users/developer/Desktop/InmobiliariasHomeCo/obj/x86/Debug/InmobiliariasHomeCo.csprojAssemblyReference.cache
+/Users/developer/Desktop/InmobiliariasHomeCo/obj/x86/Debug/InmobiliariasHomeCo.csproj.CoreCompileInputs.cache
+/Users/developer/Desktop/InmobiliariasHomeCo/obj/x86/Debug/InmobiliariasHomeCo.csproj.CopyComplete
+/Users/developer/Desktop/InmobiliariasHomeCo/obj/x86/Debug/OKYSoft.Business.InmobiliariasHomeCo.exe
+/Users/developer/Desktop/InmobiliariasHomeCo/obj/x86/Debug/OKYSoft.Business.InmobiliariasHomeCo.pdb

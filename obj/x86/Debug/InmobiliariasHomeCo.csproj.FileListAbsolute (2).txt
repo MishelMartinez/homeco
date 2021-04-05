@@ -1,0 +1,20 @@
+C:\BMS\HomeCoService\InmobiliariasHomeCo\bin\Debug\OKYSoft.Business.InmobiliariasHomeCo.exe.config
+C:\BMS\HomeCoService\InmobiliariasHomeCo\bin\Debug\OKYSoft.Business.InmobiliariasHomeCo.exe
+C:\BMS\HomeCoService\InmobiliariasHomeCo\bin\Debug\OKYSoft.Business.InmobiliariasHomeCo.pdb
+C:\BMS\HomeCoService\InmobiliariasHomeCo\bin\Debug\OKYSoft.Net.dll
+C:\BMS\HomeCoService\InmobiliariasHomeCo\obj\x86\Debug\OKYSoft.Business.InmobiliariasHomeCo.exe
+C:\BMS\HomeCoService\InmobiliariasHomeCo\obj\x86\Debug\OKYSoft.Business.InmobiliariasHomeCo.pdb
+C:\BMS\HomeCoService\InmobiliariasHomeCo\obj\x86\Debug\InmobiliariasHomeCo.csprojResolveAssemblyReference.cache
+C:\Users\mish\Documents\InmobiliariasHomeCo\InmobiliariasHomeCo\bin\Debug\OKYSoft.Business.InmobiliariasHomeCo.exe.config
+C:\Users\mish\Documents\InmobiliariasHomeCo\InmobiliariasHomeCo\bin\Debug\OKYSoft.Business.InmobiliariasHomeCo.exe
+C:\Users\mish\Documents\InmobiliariasHomeCo\InmobiliariasHomeCo\bin\Debug\OKYSoft.Business.InmobiliariasHomeCo.pdb
+C:\Users\mish\Documents\InmobiliariasHomeCo\InmobiliariasHomeCo\obj\x86\Debug\InmobiliariasHomeCo.csproj.CoreCompileInputs.cache
+C:\Users\mish\Documents\InmobiliariasHomeCo\InmobiliariasHomeCo\obj\x86\Debug\InmobiliariasHomeCo.csproj.CopyComplete
+C:\Users\mish\Documents\InmobiliariasHomeCo\InmobiliariasHomeCo\obj\x86\Debug\OKYSoft.Business.InmobiliariasHomeCo.exe
+C:\Users\mish\Documents\InmobiliariasHomeCo\InmobiliariasHomeCo\obj\x86\Debug\OKYSoft.Business.InmobiliariasHomeCo.pdb
+C:\Users\mish\Documents\InmobiliariasHomeCo\InmobiliariasHomeCo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mish\Documents\InmobiliariasHomeCo\InmobiliariasHomeCo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mish\Documents\InmobiliariasHomeCo\InmobiliariasHomeCo\obj\x86\Debug\InmobiliariasHomeCo.csprojResolveAssemblyReference.cache
+C:\Users\OKYSoft Developer\3D Objects\InmobiliariasHomeCo\InmobiliariasHomeCo\bin\Debug\OKYSoft.Business.InmobiliariasHomeCo.exe.config
+C:\Users\OKYSoft Developer\3D Objects\InmobiliariasHomeCo\InmobiliariasHomeCo\obj\x86\Debug\OKYSoft.Business.InmobiliariasHomeCo.exe
+C:\Users\OKYSoft Developer\3D Objects\InmobiliariasHomeCo\InmobiliariasHomeCo\obj\x86\Debug\OKYSoft.Business.InmobiliariasHomeCo.pdb
